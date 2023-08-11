@@ -23,7 +23,6 @@ class CaixaDaLanchonete {
       for (const itemInfo of itens) {
           const [item, quantidade] = itemInfo.split(",");
 
-          // Add this logic to check for extra items
           if(item === "chantily" && !hasCafe || item === "queijo" && !hasSanduiche) {
               return "Item extra não pode ser pedido sem o principal"
           }
@@ -38,7 +37,6 @@ class CaixaDaLanchonete {
               return "Quantidade inválida!";
           }
 
-          // Update flags for main items
           if(item == "cafe") hasCafe = true;
           if(item == "sanduiche") hasSanduiche = true;
 
